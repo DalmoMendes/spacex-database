@@ -27,6 +27,7 @@ Além disso, exemplificação de consultas SQL para implementação do back e fr
 <p>Importar (dump de dados sql) para o banco de dados</p>
 <p>Conectar via terminal ou interface gráfica no banco de dados</p>
 <p>Abrir o banco e realizar os testes com os exemplos de consultas.</p>
+
 # ceproirr
 <p>by Dalmo Mendes - dalmosilvamendens@gmail.com</p>
 <p>Oferecimento: <a href="https://ceproirr.com.br">ceproirr.com.br</a></p>

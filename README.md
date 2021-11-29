@@ -23,7 +23,10 @@ Além disso, exemplificação de consultas SQL para implementação do back e fr
 <p>Criar um banco de dados: spacex_streaming_database</p>
 <p>Criar um diretório no seu PC, abrir o mesmo</p>
 <p>Iniciar o Git e clonar o repositório:</p>
-<p>X</p>
-<p>Importar dump de dados</p>
-<p>Conectar via terminal ou interface gráfica</p>
+<p>git clone https://github.com/DalmoMendes/spacex-database.git</p>
+<p>Importar (dump de dados sql) para o banco de dados</p>
+<p>Conectar via terminal ou interface gráfica no banco de dados</p>
 <p>Abrir o banco e realizar os testes com os exemplos de consultas.</p>
+# ceproirr
+<p>by Dalmo Mendes - dalmosilvamendens@gmail.com</p>
+<p>Oferecimento: <a href="https://ceproirr.com.br">ceproirr.com.br</a></p>

@@ -1,6 +1,6 @@
 # spacex-streaming-database
 Este projeto (SpaceX Streaming Database) tem o objetivo de desenvolver um banco de dados completo para empresas de video streaming. O projeto faz parte do Labs da DIO, baseado no “banco de controle de séries assistidas-Nathally Souza”, com uma tabela. Porém, a versão 1.0 do SpaceX Streaming Database é formada por 11 tabelas e um arquivo para dump de dados. Além disso, exemplificação de consultas SQL para implementação do back e front-end.
-Além disso, exemplificação de consultas SQL para implementação do back e front-end. Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, lógico até chegar no modelo físico atual são: 
+Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, lógico até chegar no modelo físico atual são: 
 
     • user (Usuários de gestão do sistema);
     • client (Clientes do sistema);

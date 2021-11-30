@@ -1,4 +1,4 @@
-# spacex-streaming-database
+# :clapper: spacex-streaming-database
 <p>Este projeto (<strong><em>SpaceX Streaming Database</em></strong>) tem o objetivo de desenvolver um banco de dados completo para empresas de video streaming. O projeto faz parte do Labs da DIO, baseado no “banco de controle de séries assistidas-Nathally Souza”, com uma tabela. Porém, a versão 1.0 do SpaceX Streaming Database é formada por 11 tabelas e um arquivo para dump de dados. Além disso, exemplificação de consultas SQL para implementação do back e front-end.
 Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, lógico até chegar no modelo físico atual são:</p> 
 <ol>
@@ -15,7 +15,7 @@ Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, ló
 <li><p><strong>logs_cli</strong> (Entrada e saída de clientes do sistema).</p></li>
 </ol>
 
-# Scripts SQL for Databases
+# :snowflake: Scripts SQL for Databases
 <ul>
 <li><p>FireBird</p></li>
 <li><p>Oracle</p></li>
@@ -26,11 +26,11 @@ Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, ló
 
 <p>OBS: Teste os scripts nesses databases, caso você tenha algum problema reporte o erro para obter feedback: dalmosilvamendes@gmail.com.</p>
 
-# Testado no MYSQL/MariaDB
+# Testado no :dolphin: MYSQL/MariaDB
 <p>MariaDB</p>
 <p>Versão do servidor: 10.4.11-MariaDB - mariadb.org</p>
 
-# Como usar?
+# :trophy: Como usar? 
 <ol>
 <li><p>Instalar ou ter um SGBD MySQL/MariaDB</p></li>
 <li><p>Criar um banco de dados: spacex_streaming_database</p></li>
@@ -42,6 +42,6 @@ Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, ló
 <li><p>Abrir o banco e realizar os testes com os exemplos de consultas.</p></li>
 </ol>
 
-# ceproirr
+# :rocket: ceproirr 
 <p>by Dalmo Mendes - dalmosilvamendens@gmail.com</p>
 <p>Oferecimento: <a href="https://ceproirr.com.br">ceproirr.com.br</a></p>

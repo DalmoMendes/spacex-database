@@ -1,0 +1,42 @@
+Consultas SQL tabela usuário (user)
+
+Tipos de Usuários(level):
+
+level 1 - admin (root - DBA)
+level 2 - supervidor
+level 3 - financeniro
+
+01 - Mostrar todos os registros:
+SELECT * FROM `spacex_user`;
+
+02 - Mostrar usuários com Status = 1 (Cadastro Ativado):
+SELECT * FROM `spacex_user` WHERE user_status = 1;
+
+03 - Mostrar usuários com Status = 0 (Cadastro Não validado):
+SELECT * FROM `spacex_user` WHERE `user_status` = 0;
+
+04 - Mostrar usuários com Status = 3 (Cadastro bloqueado):
+SELECT * FROM `spacex_user` WHERE `user_status` = 3;
+
+05 - Mostrar usuários com level = 1 (Admin DBA):
+SELECT * FROM `spacex_user` WHERE `user_level` = 1
+
+06 - Mostrar usuários com level = 2 (Supervisor):
+SELECT * FROM `spacex_user` WHERE `user_level` = 2
+
+07 - Mostrar usuários com level = 3 (Financeiro):
+SELECT * FROM `spacex_user` WHERE `user_level` = 3
+
+08 - Mostrar total de usuários cadastrados:
+SELECT count(`idUser`) FROM `spacex_user`;
+
+09 - Mostrar total de usuários com cadastrados ativos:
+SELECT `user_status`, count(`idUser`) FROM `spacex_user` WHERE `user_status` = 1;
+
+10 - Mostrar apenas nome e cpf de todos os usuários:
+SELECT `user_name`, `user_cpf` FROM `spacex_user`;
+
+
+
+
+

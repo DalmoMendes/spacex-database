@@ -1,0 +1,65 @@
+## Contatos:
+[Sintaxe_Basica_Markdown](https://ceproirr.com.br)
+[Sintaxe_Basica_Markdown](https://www.ceproirr.com.br/webagency)
+[Sintaxe_Basica_Markdown](https://facebook.com/ceproirr)
+[Sintaxe_Basica_Markdown](https://instagram.com/ceproirr)
+[Sintaxe_Basica_Markdown](https://twitter.com/ceproirr)
+[Sintaxe_Basica_Markdown](https://www.youtube.com/channel/UC9egIn_Xkg2KFD_55mi_r8w)
+
+Tabelas para o Banco de Dados Físico:
+
+Mysql/MariaDB
+Name database: spacex_streaming_database
+
+Tables:
+• user (Usuários de gestão do sistema);
+• client (Clientes do sistema);
+• address (Endereços de clientes);
+• genre (Gênero de filmes e séries);
+• movie (Filmes ou Séries);
+• payment (Pagamentos);
+• plans (Planos);
+• signed (Assinados);
+• views (Assistidos);
+• logs_user (Entrada e saída de usuários do sistema);
+• logs_cli (Entrada e saída de clientes do sistema).
+
+by Dalmo Mendes
+dalmosilvamendes@gmail.com
+Oferecimento: ceproirr.com.br
+Boa Vista-RR, 2021
+
+##Links Útils:
+
+Database MariaDB
+[Sintaxe_Basica_Markdown](https://mariadb.org/)
+
+Downalod MariaDB:
+[Sintaxe_Basica_Markdown](https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.6.5&os=windows&cpu=x86_64&pkg=msi&m=fder)
+
+Xampp:
+[Sintaxe_Basica_Markdown](https://www.apachefriends.org/pt_br/index.html)
+
+DBDesignerFork:
+[Sintaxe_Basica_Markdown](https://sourceforge.net/projects/dbdesigner-fork/)
+
+JOIN Syntax:
+[Sintaxe_Basica_Markdown](https://mariadb.com/kb/en/join-syntax/)
+
+Juntando tabelas com JOIN
+[Sintaxe_Basica_Markdown](https://mariadb.com/kb/en/joining-tables-with-join-clauses/)
+
+## Uso dos JOINs
+
+<p>Um INNER JOIN produz um conjunto de resultados contendo apenas linhas que têm uma correspondência, em ambas as tabelas (t1 e t2), para as condições de junção especificadas.</p>
+
+<p>Já um CROSS JOIN produz um conjunto de resultados no qual todas as linhas de cada tabela são unidas a todas as linhas da outra tabela; isso também é chamado de produto cartesiano . Em MariaDB, a palavra-chave CROSS pode ser omitida, pois não faz nada. Qualquer JOIN sem uma cláusula ON é um CROSS JOIN.</p>
+
+<p>Com tudo, o LEFT JOIN é uma junção externa , que produz um conjunto de resultados com todas as linhas da tabela à "esquerda" (t1); os valores para as colunas na outra tabela (t2) dependem se uma correspondência foi encontrada ou não. Se nenhuma correspondência for encontrada, todas as colunas dessa tabela serão definidas como NULL para essa linha.</p>
+
+<p>Além disso, podemos verificar que o RIGHT JOIN é semelhante ao LEFT JOIN, embora seu conjunto de resultados contenha todas as linhas da tabela da direita, e as colunas da tabela da esquerda serão preenchidas com NULLs quando necessário.</p>
+
+<p>Portanto, os JOINs podem ser concatenados para ler os resultados de três ou mais tabelas. Todavia, fique atento ao usar, por exemplo, no MariaDB, CROSS JOIN é um equivalente sintático a INNER JOIN(eles podem substituir um ao outro). Porém, no SQL padrão, eles não são equivalentes. INNER JOINé usado com uma ON cláusula, CROSS JOIN é usado de outra forma.</p>
+
+<p>Para finalizar, fique atendo ao uso de parênteses podem ser ignorados em expressões de junção contendo apenas operações de junção interna. MariaDB também oferece suporte a junções aninhadas, consulte em:
+http://dev.mysql.com/doc/refman/5.1/en/nested-join-optimization.html. </p>

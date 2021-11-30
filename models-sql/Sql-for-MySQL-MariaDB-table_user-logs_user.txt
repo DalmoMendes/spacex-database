@@ -1,0 +1,148 @@
+Consultas SQL:
+Tabelas Usuários e Logs de usuários
+
+(spacex_user)
+(spacex_logs_user)
+
+01 - Mostrar usuários:
+
+SELECT `spacex_user`.`idUser`, `spacex_user`.`user_name` FROM `spacex_user`;
+
+02 - Mostrar usuários ativos:
+
+SELECT `spacex_user`.`idUser`, `spacex_user`.`user_name` FROM `spacex_user` WHERE `spacex_user`.`user_status` = 1;
+
+03 - Mostrar dados da tabela spacex_logs_user(logs do Usuário):
+
+SELECT `spacex_logs_user`.`fkUser`, `spacex_logs_user`.`loguse_record`, `spacex_logs_user`.`loguse_address` FROM `spacex_logs_user`;
+
+04 - Mostrar Logs e identificar usuários com status Ativo:
+
+SELECT
+`spacex_user`.`idUser`, `spacex_user`.`user_name`,
+`spacex_logs_user`.`fkUser`,`spacex_logs_user`.`loguse_type`, `spacex_logs_user`.`loguse_record`, `spacex_logs_user`.`loguse_address`
+FROM `spacex_user`, `spacex_logs_user`
+WHERE `spacex_user`.`user_status` = 1
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser`;
+
+05 - Mostrar últimos(DESC) Logs e identificar usuários com status Ativo,
+ordenando pelo Id do log com limite de 4 registros:
+
+SELECT
+`spacex_user`.`idUser`, `spacex_user`.`user_name`,`spacex_logs_user`.`fkUser`,`spacex_logs_user`.`loguse_type`, `spacex_logs_user`.`loguse_record`, `spacex_logs_user`.`loguse_address` 
+FROM `spacex_user`, `spacex_logs_user` 
+WHERE `spacex_user`.`user_status` = 1 
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` 
+ORDER BY `idLogs_user` DESC LIMIT 4;
+
+
+06 - Mostrar primeiros(ASC) Logs e identificar usuários com status Ativo,
+ordenando pelo Id do log com limite de 4 registros:
+
+SELECT
+`spacex_user`.`idUser`, `spacex_user`.`user_name`, `spacex_logs_user`.`fkUser`,`spacex_logs_user`.`loguse_type`, `spacex_logs_user`.`loguse_record`, `spacex_logs_user`.`loguse_address` 
+FROM `spacex_user`, `spacex_logs_user` 
+WHERE `spacex_user`.`user_status` = 1 
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` 
+ORDER BY `idLogs_user` ASC LIMIT 4;
+
+07 - Mostrar todos os logs do primeiro(ASC) ao último:
+
+SELECT
+`spacex_user`.`user_name` AS Nome, `spacex_logs_user`.`loguse_type` AS Entrada_Saida, `spacex_logs_user`.`loguse_record` AS Dia, `spacex_logs_user`.`loguse_address` AS Endereco 
+FROM `spacex_user`, `spacex_logs_user` 
+WHERE `spacex_user`.`user_status` = 1 
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` 
+ORDER BY `idLogs_user` ASC
+
+08 - Mostrar todos os logs do último(ASC) ao primeiro:
+
+SELECT `spacex_user`.`user_name` AS Nome, `spacex_logs_user`.`loguse_type` AS Entrada_Saida, `spacex_logs_user`.`loguse_record` AS Dias_Horas, `spacex_logs_user`.`loguse_address` AS Enderecos 
+FROM `spacex_user`, `spacex_logs_user` 
+WHERE `spacex_user`.`user_status` = 1 
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` 
+ORDER BY `idLogs_user` DESC
+
+09 - Usar INNER JOIN no lugar da (Virgula) entre as tabelas: 
+
+Ex1: `spacex_user`, `spacex_logs_user`
+EX2: `spacex_user` INNER JOIN `spacex_logs_user`
+
+SELECT `spacex_user`.`user_name` AS Nome, `spacex_logs_user`.`loguse_type` AS Entrada_Saida, `spacex_logs_user`.`loguse_record` AS Dias_Horas, `spacex_logs_user`.`loguse_address` AS Enderecos 
+FROM `spacex_user` INNER JOIN `spacex_logs_user` 
+WHERE `spacex_user`.`user_status` = 1 AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` ORDER BY `idLogs_user` ASC
+
+10 - Usar ON no lugar de WHERE:
+
+Ex1:
+`spacex_user` INNER JOIN `spacex_logs_user` WHERE `spacex_user`.`user_status` = 1
+
+Ex2:
+INNER JOIN `spacex_logs_user` ON `spacex_user`.`user_status` = 1 
+
+SELECT `spacex_user`.`user_name` AS Nome, `spacex_logs_user`.`loguse_type` AS Entrada_Saida, `spacex_logs_user`.`loguse_record` AS Dia, `spacex_logs_user`.`loguse_address` AS Endereco FROM `spacex_user` INNER JOIN `spacex_logs_user` ON `spacex_user`.`user_status` = 1 AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` ORDER BY `idLogs_user` ASC;
+
+11 - Buscar Todos os dados com INNER JOIN:
+
+SELECT * FROM `spacex_user` INNER JOIN `spacex_logs_user` 
+ON `spacex_user`.`user_status` = 1 
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` 
+ORDER BY `idLogs_user` ASC;
+
+11 - Buscar Todos os dados com INNER JOIN de um usuário específico:
+
+Usuário idUser = 1;
+
+SELECT * FROM `spacex_user` INNER JOIN `spacex_logs_user` 
+ON `spacex_user`.`user_status` = 1
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser`
+AND `spacex_user`.`idUser` = 1
+ORDER BY `idLogs_user` ASC;
+
+Resultado: A mostrar registos de 0 - 6 (7 total, A consulta demorou 0,0006 segundos.)
+
+12 - Usando LEFT JOIN (Todos os registros de acesso no sistema de um usuário específico):
+
+SELECT * FROM `spacex_user` LEFT JOIN `spacex_logs_user` 
+ON `spacex_user`.`user_status` = 1
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser`
+AND `spacex_user`.`idUser` = 1
+ORDER BY `idLogs_user` ASC;
+
+Resultado: A mostrar registos de 0 - 8 (9 total, A consulta demorou 0,0010 segundos.)
+
+13 - Usando LEFT OUTER JOIN (Todos os registros de acesso no sistema de um usuário específico):
+
+SELECT * FROM `spacex_user` LEFT OUTER JOIN `spacex_logs_user` 
+ON `spacex_user`.`user_status` = 1
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser`
+AND `spacex_user`.`idUser` = 1
+ORDER BY `idLogs_user` ASC;
+
+Resultado: A mostrar registos de 0 - 8 (9 total, A consulta demorou 0,0009 segundos.)
+
+14 - Usando RIGHT OUTER JOIN (Todos os registros de acesso no sistema de um usuário específico).
+Porém, mostra todos os outros campos como null em campos da tabela spacex_user:
+
+SELECT * FROM `spacex_user` RIGHT OUTER JOIN `spacex_logs_user` ON `spacex_user`.`user_status` = 1 AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser` AND `spacex_user`.`idUser` = 1 ORDER BY `idLogs_user` ASC;
+
+Resultado: A mostrar registos de 0 - 12 (13 total, A consulta demorou 0,0008 segundos.)
+
+15 - Usando CROSS JOIN (Todos os registros de acesso no sistema de um usuário específico):
+
+SELECT * FROM `spacex_user` INNER JOIN `spacex_logs_user` 
+ON `spacex_user`.`user_status` = 1
+AND `spacex_user`.`idUser` = `spacex_logs_user`.`fkUser`
+AND `spacex_user`.`idUser` = 1
+ORDER BY `idLogs_user` ASC;
+
+Resultado:A mostrar registos de 0 - 6 (7 total, A consulta demorou 0,0007 segundos.)
+
+
+
+
+
+
+
+
+

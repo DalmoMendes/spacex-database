@@ -16,7 +16,8 @@ Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, ló
 <li><p><strong>logs_cli</strong> (Entrada e saída de clientes do sistema).</p></li>
 </ol>
 
-<p>:books:<strong><a href="https://github.com/DalmoMendes/spacex-database/blob/master/documents_database/index.html">DOCUMENTAÇÃO PROJETO SPACEX STREAMING DATABASE</a></strong></p>
+<p>:books:
+  <strong> Wiki Page - DOCUMENTAÇÃO PROJETO SPACEX STREAMING DATABASE</strong></p>
 
 # :snowflake: Scripts SQL for Databases
 <ul>

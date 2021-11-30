@@ -42,6 +42,41 @@ Portanto, as entidades obtidas na análise de requisitos, modelo conceitual, ló
 <li><p>Abrir o banco e realizar os testes com os exemplos de consultas.</p></li>
 </ol>
 
+## Uso dos JOINs
+
+<p>Um INNER JOIN produz um conjunto de resultados contendo apenas linhas que têm uma correspondência, em ambas as tabelas (t1 e t2), para as condições de junção especificadas.</p>
+
+<p>Já um CROSS JOIN produz um conjunto de resultados no qual todas as linhas de cada tabela são unidas a todas as linhas da outra tabela; isso também é chamado de produto cartesiano . Em MariaDB, a palavra-chave CROSS pode ser omitida, pois não faz nada. Qualquer JOIN sem uma cláusula ON é um CROSS JOIN.</p>
+
+<p>Com tudo, o LEFT JOIN é uma junção externa , que produz um conjunto de resultados com todas as linhas da tabela à "esquerda" (t1); os valores para as colunas na outra tabela (t2) dependem se uma correspondência foi encontrada ou não. Se nenhuma correspondência for encontrada, todas as colunas dessa tabela serão definidas como NULL para essa linha.</p>
+
+<p>Além disso, podemos verificar que o RIGHT JOIN é semelhante ao LEFT JOIN, embora seu conjunto de resultados contenha todas as linhas da tabela da direita, e as colunas da tabela da esquerda serão preenchidas com NULLs quando necessário.</p>
+
+<p>Portanto, os JOINs podem ser concatenados para ler os resultados de três ou mais tabelas. Todavia, fique atento ao usar, por exemplo, no MariaDB, CROSS JOIN é um equivalente sintático a INNER JOIN(eles podem substituir um ao outro). Porém, no SQL padrão, eles não são equivalentes. INNER JOINé usado com uma ON cláusula, CROSS JOIN é usado de outra forma.</p>
+
+<p>Para finalizar, fique atendo ao uso de parênteses podem ser ignorados em expressões de junção contendo apenas operações de junção interna. MariaDB também oferece suporte a junções aninhadas, consulte em:
+[Sintaxe_Basica_Markdown](http://dev.mysql.com/doc/refman/5.1/en/nested-join-optimization.html).</p>
+
+## Links Útils:
+
+Database MariaDB
+[Sintaxe_Basica_Markdown](https://mariadb.org/)
+
+Downalod MariaDB:
+[Sintaxe_Basica_Markdown](https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.6.5&os=windows&cpu=x86_64&pkg=msi&m=fder)
+
+Xampp:
+[Sintaxe_Basica_Markdown](https://www.apachefriends.org/pt_br/index.html)
+
+DBDesignerFork:
+[Sintaxe_Basica_Markdown](https://sourceforge.net/projects/dbdesigner-fork/)
+
+JOIN Syntax:
+[Sintaxe_Basica_Markdown](https://mariadb.com/kb/en/join-syntax/)
+
+Juntando tabelas com JOIN
+[Sintaxe_Basica_Markdown](https://mariadb.com/kb/en/joining-tables-with-join-clauses/)
+
 # :rocket: ceproirr 
 <p>by Dalmo Mendes - dalmosilvamendens@gmail.com</p>
 <p>Oferecimento: <a href="https://ceproirr.com.br">ceproirr.com.br</a></p>

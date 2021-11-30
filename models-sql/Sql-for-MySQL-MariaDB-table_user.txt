@@ -4,7 +4,7 @@ Tipos de Usuários(level):
 
 level 1 - admin (root - DBA)
 level 2 - supervidor
-level 3 - financeniro
+level 3 - financeiro
 
 01 - Mostrar todos os registros:
 SELECT * FROM `spacex_user`;
